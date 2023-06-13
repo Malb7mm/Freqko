@@ -1,11 +1,18 @@
-.inner {
+#header-inner {
     display: flex;
     align-items: center;
     background-color: #f6f3f3;
     padding: 0 40px;
     height: 80px;
 }
-.roboto {
+#header-inner p {
+    margin: 0 5px;
+}
+#header-title {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 30px;
+}
+#header-subtitle {
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 18px;
 }
