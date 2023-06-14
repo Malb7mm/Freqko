@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Freqko | テンポ解析補助アプリ</title>
+	<title>Freqko | テンポ解析補助ツール</title>
 	<meta charset="UTF-8">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
@@ -12,12 +12,42 @@
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Roboto+Condensed&display=swap" rel="stylesheet">
 </head>
 <header>
-    <div id="header-inner">
-        <p id="header-title">Freqko</p>
-        <p id="header-subtitle">ふれっこ</p>
+    <div id="header-bg">
+        <div id="header" class="inner">
+            <p id="header-title">Freqko</p>
+            <p id="header-subtitle">ふりっこ<span id="header-phrase">- テンポ解析補助ツール</span></p>
+        </div>
     </div>
 </header>
 <body>
-    <script src="main.js"></script>
+    <div class="inner">
+        <noscript>
+            JavaScriptを有効にしてください（正常に動作しません）<br/>
+        </noscript>
+        <div id="toolbar">
+            <div class="toolbar-file" id="toolbar-file-dd">
+                <label><input type="file" name="file" accept=".mp3, .ogg, .wav"><p>音声ファイルを選択</p></label>
+                <p>(未選択)</p>
+            </div>
+        </div>
+        <div id="toolbar2">
+            <input class="toolbar-button" type="button" value="再生" onclick="playpause()" style="width: 80px;">
+        </div>
+        <div id="waveform-container">
+            <div id="waveform"></div>
+        </div>
+        <div id="timeline">
+            <canvas id="timeline-canvas" width="1000" height="150"></canvas>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+
+    <script src="waveform.js"></script>
+    <script src="timeline.js"></script>
 </body>
+<footer>
+    <p id="footer">© 2023 Malb7mm</p>
+</footer>
 </html>

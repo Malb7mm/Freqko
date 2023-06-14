@@ -1,18 +1,124 @@
-#header-inner {
+:root {
+    --col-headerbg: #f6f3f3;
+    --col-headerbg-hover: #e6e3e3;
+    --col-border: #cccccc;
+    --col-textmain: #000000;
+    --col-textsub: #939999;
+}
+.inner {
+    width: 1000px;
+    height: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#header-bg {
+    background-color: var(--col-headerbg);
+    height: 80px;
+}
+#header {
     display: flex;
     align-items: center;
-    background-color: #f6f3f3;
     padding: 0 40px;
     height: 80px;
 }
-#header-inner p {
-    margin: 0 5px;
+#header * {
+    margin: 0 6px;
 }
 #header-title {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 30px;
+    color: var(--col-textmain);
 }
 #header-subtitle {
     font-family: 'M PLUS 1p', sans-serif;
     font-size: 18px;
+    color: var(--col-textmain);
+}
+#header-phrase {
+    font-size: 18px;
+    color: var(--col-textsub);
+}
+
+#toolbar {
+    display: flex;
+    align-items: top;
+    padding: 0 40px;
+    height: 30px;
+}
+#toolbar p {
+    margin: 0 10px;
+}
+#toolbar2 {
+    display: flex;
+    align-items: top;
+    padding: 0 40px;
+    height: 30px;
+}
+.toolbar-button {
+    font-family: 'M PLUS 1p', sans-serif;
+    color: #333333;
+    font-size: 14px;
+
+    width: 30%;
+    height: 90%;
+    border-radius: 5px;
+    background-color: var(--col-headerbg);
+    border: 1px solid var(--col-border);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    transition: all 0.2s 0s ease;
+}
+.toolbar-button:hover {
+    background-color: var(--col-headerbg-hover);
+}
+.toolbar-file {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+}
+.toolbar-file > label {
+    width: 30%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: var(--col-headerbg);
+    border: 1px solid var(--col-border);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    transition: all 0.2s 0s ease;
+}
+.toolbar-file > label:hover {
+    background-color: var(--col-headerbg-hover);
+}
+.toolbar-file > label > input {
+    display: none;
+    height: 100%;
+}
+.toolbar-file > label > p {
+    text-align: center;
+    font-size: 14px;
+    padding-top: 5px;
+    color: var(--col-textmain);
+}
+.toolbar-file > p {
+    font-size: 14px;
+    color: var(--col-textmain);
+}
+#waveform-container {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 30px;
+}
+
+#timeline {
+    height: 150px;
+    width: 100%;
+}
+
+#footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--col-textmain);
 }
